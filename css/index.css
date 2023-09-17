@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+    padding: 0;
+    margin: 0; 
+    font-family: 'Poppins', sans-serif;
+}
+.header{
+    background-color: #b9c3c4;
+    height: 40vh;
+    text-align: center;
+    font-size: 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.header h2{
+    padding-top: 1vh;
+    font-size: 4vw;
+}
+.header a{
+    font-size: 4vw;
+    margin-top: 2vh;
+    background-color: #ad5c70;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+}
+#TecUse{
+    text-align: center;
+    padding-top: 5vh;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+#TecUse ul,  #Social ul{
+    padding-top:  3vh;
+    text-align: center;
+    list-style: none;
+}
+#TecUse li,  #Social li{
+    padding-bottom: 2vh;
+    font-size: 20px;
+}
+#TecUse i, #Social i{
+    padding-right: 15px;
+    font-size: 25px;
+}
+.fa-php{
+    color: #777BB3;
+}
+.fa-html5{
+    color: orangered;
+}
+.fa-css3-alt{
+    color: blue;
+}
+.fa-js{
+    color: #dbe000;
+}
+.fa-database{
+    color: #db6205;
+}
+#Social{
+    text-align: center;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+#Social a{
+    text-decoration: none;
+    outline: none;
+    color: black;
+}
+.fa-instagram{
+    color: rgb(209, 53, 79);
+}
+.fa-tiktok{
+    color: rgb(202, 3, 3);
+}
+@media screen and  (min-width: 520px) {
+    .header h1{
+        font-size: 40px;
+    }
+    .header h2{
+        font-size: 20px;
+    }
+    .header a{
+        font-size: 17px;
+        padding: 10px;
+    }
+    
+}
