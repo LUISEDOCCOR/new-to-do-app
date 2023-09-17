@@ -14,7 +14,7 @@
 #welcome h3{
     font-size: 5vw;
 }
-#alert{
+#root_alert{
     display: flex;
     justify-content: center;
     margin-top: 2vh;
@@ -29,4 +29,22 @@
     margin-top: 7vh;
     width: 95vw;
 }
-#add_to_do{width: 95vw;}
+#add_to_do{
+    width: 95vw;
+}
+
+@media screen and (min-width: 500px) {
+    #welcome h2{
+        margin-bottom: 2vh;
+        font-size: 30px;
+    }
+    #welcome h3{
+        font-size: 22px;
+    } 
+    #todos, #add_to_do{
+        width: 50vw;
+    }
+    .alert{
+        width: 25vw;
+    }
+}
