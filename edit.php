@@ -30,8 +30,10 @@ if ($todo['user_id'] !== $_SESSION['user']['id']) {
 }
 
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
-    if(!isset($_POST['title']) || !isset($_POST['des'])){
-        $x = $conn->prepare('UPDATE dolist title = :title, subtitle = :des WHERE id = :id');
+    if(!empty($_POST['title']) || !empty($_POST['des'])){
+        $x = $conn->prepare('UPDATE dolist SET title = :title, subtitle = :des WHERE id = :id');
+        
+
         $x->execute([
             ':title' => $_POST['title'],
             ':des' => $_POST['des'],
@@ -41,7 +43,6 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
         header('Location: home.php');
     }
 }
-
 require 'head.php'
 ?>
 <script defer src="./js/home.js"></script>
@@ -51,6 +52,11 @@ require 'head.php'
         <?php require 'nav.php' ?>
     </header>
     <main>
+    <article id="root_alert">
+        <div class="alert alert-dismissible alert-danger d-none" id="alert">
+
+        </div>
+    </article>    
     <article class="d-flex justify-content-center mt-3">
             <table class="table table-hover" id="add_to_do">
                 <thead>
@@ -59,7 +65,7 @@ require 'head.php'
                     </tr>
                 </thead>
                 <tbody>
-                    <form action="home.php" method="POST" id="new_todo">
+                    <form action="edit.php?id=<?=$todo['id']?>" method="POST" id="new_todo">
                         <tr class="table-dark">
                             <td class="w-25">
                                 <input type="text" name="title" value="<?=$todo['title']?>" class="form-control " id="title" placeholder="Title">
